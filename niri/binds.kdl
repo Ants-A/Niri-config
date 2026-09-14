@@ -23,7 +23,7 @@ binds {
     Mod+V { spawn-sh "vicinae vicinae://launch/clipboard/history";} 
     Ctrl+Shift+Escape hotkey-overlay-title="Btop" { spawn-sh "command -v btop && kitty -1 fish -c btop"; }
     Mod+L {spawn-sh "qs ipc call lock lock";}
-    Mod+P {spawn-sh "swaync-client -t";}
+    Mod+P {spawn-sh "qs ipc call notifications toggle";}
     
     // === Application Launchers ===
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
@@ -39,7 +39,7 @@ binds {
     Mod+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
     Mod+Shift+F { toggle-windowed-fullscreen; }
-    Mod+M { maximize-window-to-edges; }
+    Mod+M { fullscreen-window; }
     Mod+Alt+Space { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
@@ -113,7 +113,7 @@ binds {
     Mod+B {spawn "brave";}
     Mod+D {spawn-sh "vesktop";}
     Mod+G {spawn "godot-mono";}
-    Mod+H {spawn "github-desktop";}
+    Mod+H {spawn-sh "github-desktop";}
     Mod+S {spawn "steam";}
     Mod+U {spawn "blender";}
     Mod+T {spawn "teams-for-linux";}
@@ -134,6 +134,6 @@ binds {
     XF86AudioMicMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // === Brightness ===
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+XF86MonBrightnessUp allow-when-locked=true { spawn "sh" "-c" "brightnessctl --class=backlight set +5% && qs ipc call brightness trigger"; }
+XF86MonBrightnessDown allow-when-locked=true { spawn "sh" "-c" "brightnessctl --class=backlight set 5%- && qs ipc call brightness trigger"; }
 }
