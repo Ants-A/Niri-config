@@ -30,7 +30,7 @@ window-rule {
 
 // KDE utilities (extra catch)
 window-rule {
-    match app-id=r#"(?i)(kcm_networkmanagement|kcm_bluetooth)"#
+    match app-id="blueman-manager"
     open-floating true
 }
 
