@@ -134,6 +134,6 @@ binds {
     XF86AudioMicMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // === Brightness ===
-XF86MonBrightnessUp allow-when-locked=true { spawn "sh" "-c" "brightnessctl --class=backlight set +5% && qs ipc call brightness trigger"; }
-XF86MonBrightnessDown allow-when-locked=true { spawn "sh" "-c" "brightnessctl --class=backlight set 5%- && qs ipc call brightness trigger"; }
+XF86MonBrightnessUp allow-when-locked=true { spawn "sh" "-c" "brightnessctl --class=backlight set +10% && qs ipc call brightness trigger"; }
+XF86MonBrightnessDown allow-when-locked=true { spawn "sh" "-c" "brightnessctl --class=backlight set 10%- && qs ipc call brightness trigger"; }
 }

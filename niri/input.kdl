@@ -1,6 +1,6 @@
 // --- Input Configuration ---
 input {
-    focus-follows-mouse
+    focus-follows-mouse max-scroll-amount="50%"
     keyboard {
         xkb {
             layout "ee"
@@ -11,6 +11,12 @@ input {
     }
     touchpad {
         tap
+        tap-button-map "left-right-middle"
+        click-method "clickfinger"
         natural-scroll
+    }
+    mouse {
+      accel-profile "flat"
+      accel-speed 0.4
     }
 }

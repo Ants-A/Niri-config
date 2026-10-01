@@ -27,11 +27,6 @@ window-rule {
     open-floating false
 }
 
-// ---------------- Floating Utility Apps ----------------
-window-rule {
-    match app-id=r#"(?i)(gnome-calculator|galculator|blueman-manager|org\.gnome\.nautilus|steam|xdg-desktop-portal|mpv|org\.quickshell)"#
-    open-floating true
-}
 
 // KDE utilities (extra catch)
 window-rule {

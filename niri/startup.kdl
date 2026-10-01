@@ -6,7 +6,7 @@ spawn-sh-at-startup "systemctl --user import-environment WAYLAND_DISPLAY XDG_CUR
 spawn-sh-at-startup  "vicinae server"
 spawn-sh-at-startup  "awww-daemon"
 spawn-sh-at-startup  "qs"
-spawn-sh-at-startup "rclone mount gdrive: ~/Documents/GoogleDrive/ --vfs-cache-mode full --daemon --allow-non-empty"
+spawn-sh-at-startup "rclone mount GoogleDrive: ~/Documents/GoogleDrive/ --vfs-cache-mode full --daemon --allow-non-empty"
 spawn-at-startup "bash" "-c" "systemctl --user import-environment XDG_MENU_PREFIX && kbuildsycoca6"
 // spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store &"
