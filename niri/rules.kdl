@@ -90,21 +90,18 @@ overview {
 
 
 // ---------------- Blur / Transparency ----------------
-// window-rule {
-//     opacity 0.9
-//     background-effect {
-//         blur true
-//         noise 0.3
-//         saturation 5
-//     }
-// }
-//
-// window-rule {
-//     match is-active=false
-//     opacity 0.8
-//     background-effect {
-//         blur true
-//         noise 0.3
-//         saturation 5
-//     }
-// }
+layer-rule {
+    match namespace="^qs-bar$"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+  match app-id="kitty"
+  background-effect {
+    blur true
+    xray false
+  }
+}

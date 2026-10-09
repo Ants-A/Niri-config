@@ -16,6 +16,7 @@ recent-windows {
 binds {
     // === System & Overview ===
     Mod+A {spawn-sh "vicinae open";}
+    Shift+Super+F23 {spawn-sh "vicinae open";}
     Mod+O repeat=false { toggle-overview; }
     Mod+Shift+D repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
